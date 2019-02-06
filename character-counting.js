@@ -4,20 +4,19 @@ var counting = function(word) {
   input = word.split(' ');
   input = input.join('');
 
-  console.log(input);
+//  console.log(input);
 
   var output = {};
 
-for (var i = 0; i < word.length; i++) {
-
-
+  for (var i of input) {
+    if (!output[i]) {
+      output[i] =  1;
+    } else if (output[i]) {
+      output[i] += 1
+    }
+  }
+   return(output);
 }
-
-
-
-}
-
-
 
 console.log(counting("lighthouse in the house"));
 
